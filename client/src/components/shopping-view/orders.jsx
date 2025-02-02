@@ -37,14 +37,21 @@ function ShoppingOrders() {
     if (orderDetails !== null) setOpenDetailsDialog(true);
   }, [orderDetails]);
 
- 
+
 
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Order History</CardTitle>
+        
+ 
+        <CardTitle>Order History
+          
+        </CardTitle>
+           
       </CardHeader>
+      
       <CardContent>
+
         <Table>
           <TableHeader>
             <TableRow>
@@ -70,6 +77,8 @@ function ShoppingOrders() {
                             ? "bg-green-500"
                             : orderItem?.orderStatus === "rejected"
                             ? "bg-red-600"
+                            : orderItem?.orderStatus === "delivered"
+                             ? "bg-green-500"
                             : "bg-black"
                         }`}
                       >
@@ -99,8 +108,11 @@ function ShoppingOrders() {
                 ))
               : null}
           </TableBody>
+          
         </Table>
+        
       </CardContent>
+      
     </Card>
   );
 }

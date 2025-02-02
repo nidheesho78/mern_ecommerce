@@ -150,7 +150,7 @@ function AdminProducts() {
               onSubmit={onSubmit}
               formData={formData}
               setFormData={setFormData}
-              buttonText={currentEditedId !== null ? "Edit" : "Add"}
+              buttonText={currentEditedId !== null ? "Update" : "Add"}
               formControls={addProductFormElements}
               isBtnDisabled={!isFormValid()}
             />

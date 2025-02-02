@@ -22,7 +22,6 @@ const store = configureStore({
     shopOrder: shopOrderSlice,
     shopSearch: shopSearchSlice,
     shopReview: shopReviewSlice,
-
     commonFeature: commonFeatureSlice,
   },
 });

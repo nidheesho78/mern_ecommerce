@@ -59,6 +59,8 @@ export const getOrderDetails = createAsyncThunk(
   }
 );
 
+
+
 const shoppingOrderSlice = createSlice({
   name: "shoppingOrderSlice",
   initialState,
@@ -107,7 +109,7 @@ const shoppingOrderSlice = createSlice({
       .addCase(getOrderDetails.rejected, (state) => {
         state.isLoading = false;
         state.orderDetails = null;
-      });
+      })
   },
 });
 

@@ -40,6 +40,8 @@ function ShoppingOrderDetailsView({ orderDetails }) {
                     ? "bg-green-500"
                     : orderDetails?.orderStatus === "rejected"
                     ? "bg-red-600"
+                    : orderDetails?.orderStatus === "delivered"
+                    ? "bg-green-500"
                     : "bg-black"
                 }`}
               >

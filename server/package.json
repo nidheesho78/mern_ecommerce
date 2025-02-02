@@ -8,7 +8,7 @@
     "start": "server.js",
     "dev": "nodemon server.js"
   },
-  "author": "sangam mukherjee",
+  "author": "Nidheesh",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.7.7",

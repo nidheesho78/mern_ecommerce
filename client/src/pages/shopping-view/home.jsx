@@ -3,20 +3,23 @@ import bannerOne from "../../assets/banner-1.webp";
 import bannerTwo from "../../assets/banner-2.webp";
 import bannerThree from "../../assets/banner-3.webp";
 import {
-  Airplay,
-  BabyIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
-  CloudLightning,
-  Heater,
-  Images,
   Shirt,
-  ShirtIcon,
-  ShoppingBasket,
-  UmbrellaIcon,
-  WashingMachine,
   WatchIcon,
 } from "lucide-react";
+
+import { FaFemale,
+  FaChild,
+  FaTshirt,
+ } from 'react-icons/fa';
+
+ import { GiTie,
+  GiRunningShoe,
+  GiClothes 
+  } from 'react-icons/gi';
+
+
 import { Card, CardContent } from "@/components/ui/card";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -32,20 +35,20 @@ import ProductDetailsDialog from "@/components/shopping-view/product-details";
 import { getFeatureImages } from "@/store/common-slice";
 
 const categoriesWithIcon = [
-  { id: "men", label: "Men", icon: ShirtIcon },
-  { id: "women", label: "Women", icon: CloudLightning },
-  { id: "kids", label: "Kids", icon: BabyIcon },
+  { id: "men", label: "Men", icon: GiTie },
+  { id: "women", label: "Women", icon: FaFemale },
+  { id: "kids", label: "Kids", icon: FaChild },
   { id: "accessories", label: "Accessories", icon: WatchIcon },
-  { id: "footwear", label: "Footwear", icon: UmbrellaIcon },
+  { id: "footwear", label: "Footwear", icon: GiRunningShoe },
 ];
 
 const brandsWithIcon = [
-  { id: "nike", label: "Nike", icon: Shirt },
-  { id: "adidas", label: "Adidas", icon: WashingMachine },
-  { id: "puma", label: "Puma", icon: ShoppingBasket },
-  { id: "levi", label: "Levi's", icon: Airplay },
-  { id: "zara", label: "Zara", icon: Images },
-  { id: "h&m", label: "H&M", icon: Heater },
+  { id: "nike", label: "Nike", icon: GiClothes },
+  { id: "adidas", label: "Adidas", icon: Shirt },
+  { id: "puma", label: "Puma", icon: FaTshirt },
+  { id: "levi", label: "Levi's", icon: Shirt },
+  { id: "zara", label: "Zara", icon: FaTshirt  },
+  { id: "h&m", label: "H&M", icon: GiClothes  },
 ];
 function ShoppingHome() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -114,7 +117,7 @@ function ShoppingHome() {
     );
   }, [dispatch]);
 
-  console.log(productList, "productList");
+  
 
   useEffect(() => {
     dispatch(getFeatureImages());
